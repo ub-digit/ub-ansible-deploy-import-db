@@ -1,0 +1,9 @@
+---
+- include_role:
+    name: ub-ansible-deploy-facts
+- include_role:
+    name: ub-ansible-import-db
+  vars:
+    database_variant: "{{ database_variant }}"
+    db_service: "{{ db_service }}"
+    db_dump_filename: "{{ db_dump_filename }}"
